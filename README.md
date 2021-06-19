@@ -11,8 +11,8 @@ I used:
 
 And for change view mode:
 - FloatingActionButton
-- SingleChildScrollView
-- GridView
+- SingleChildScrollView - vertical
+- GridView - horizontal
 
 I applied a setState() and componentization
 
