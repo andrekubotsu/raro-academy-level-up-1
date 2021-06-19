@@ -1,16 +1,25 @@
-# level_up_1
+# LevelUP#1
 
-A new Flutter project.
+A Raro Academy's challenge/assignment. We had to draw flags using basic widgets.
 
-## Getting Started
+I used:
+- Row
+- Column
+- Stack
+- SizedBox
+- Container
 
-This project is a starting point for a Flutter application.
+And for change view mode:
+- FloatingActionButton
+- SingleChildScrollView
+- GridView
 
-A few resources to get you started if this is your first Flutter project:
+I applied a setState() and componentization
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## GridView mode:
+![Screenshot 1](https://github.com/andrekubotsu/raro-academy-level-up-1/blob/main/gridview_mode1.png)
+![Screenshot 2](https://github.com/andrekubotsu/raro-academy-level-up-1/blob/main/gridview_mode2.png)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## SingleChildScrollView mode:
+![Screenshot 1](https://github.com/andrekubotsu/raro-academy-level-up-1/blob/main/singe_mode1.png)
+![Screenshot 2](https://github.com/andrekubotsu/raro-academy-level-up-1/blob/main/single_mode2.png)
