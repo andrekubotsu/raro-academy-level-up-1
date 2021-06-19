@@ -34,26 +34,46 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  bool changeViewMode = true;
+  void _changeView() {
+    setState(() {
+      changeViewMode = !changeViewMode;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
           title: Text(widget.title),
         ),
-        body: SingleChildScrollView(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              JapanFlagWidget(),
-              BrazilFlagWidget(),
-              UsaFlagWidget(),
-              SwitzerFlagWidget(),
-            ],
-          ),
-        ),
+        body: changeViewMode
+            ? SingleChildScrollView(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    JapanFlagWidget(),
+                    BrazilFlagWidget(),
+                    UsaFlagWidget(),
+                    SwitzerFlagWidget(),
+                  ],
+                ),
+              )
+            : GridView(
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  mainAxisSpacing: 20,
+                ),
+                scrollDirection: Axis.horizontal,
+                children: [
+                  JapanFlagWidget(),
+                  BrazilFlagWidget(),
+                  UsaFlagWidget(),
+                  SwitzerFlagWidget(),
+                ],
+              ),
         floatingActionButton: FloatingActionButton(
-            //TODO: a toggle function to change view mode - list to grid
-            onPressed: () {},
+            onPressed: _changeView,
             tooltip: 'Change view mode',
             child: Icon(Icons.view_module_rounded)));
   }
